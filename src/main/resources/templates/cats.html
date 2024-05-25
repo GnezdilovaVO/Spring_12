@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cats</title>
+
+    <link rel="stylesheet" th:href="@{/css/style_new.css}">
+    <script th:src="@{/js/script.js}" defer></script>
+  </head>
+  <body>
+    <div class="content">
+      <h1 class="title">Котики</h1>
+
+      <table class="cats">
+        <tr>
+          <th>Cat name</th>
+          <th>Cat breed</th>
+        </tr>
+        <tr th:each="c: ${cats}">
+          <td th:text="${c.name}"></td>
+          <td th:text="${c.breed}"></td>
+        </tr>
+      </table>
+      <h2>Add new cat</h2>
+      <form action="/cats" method="post">
+        Name: <input type="text" name="name" /><br />
+        Breed: <input type="text" name="breed" /><br />
+        <button type="submit">Add new cat</button>
+      </form>
+    </div>
+  </body>
+</html>

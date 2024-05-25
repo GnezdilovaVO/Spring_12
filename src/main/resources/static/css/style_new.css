@@ -1,0 +1,12 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+.title{
+    font-size: 40px;
+    color:blue;
+}
+h2 {
+    font-size: 20px;
+    color: blue;
+}

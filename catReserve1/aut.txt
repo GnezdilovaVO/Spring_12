@@ -1,0 +1,1 @@
+CAT(NAME=AUT, BREED=ВИСЛОУХИЙ)
